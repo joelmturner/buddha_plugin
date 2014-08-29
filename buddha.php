@@ -39,6 +39,7 @@ class Buddha_Button_Widget extends WP_Widget
 
 		//Add fields
 		$this->add_field('title', 'Enter title', '', 'text');
+		$this->add_field('plugin_bg_color', 'Enter the background color of the plugin', '', 'text');
 		$this->add_field('btn_color', 'Button Color', 'Enter the hex code for your button color.', 'text');
 		$this->add_field('btn_text_color', 'Button Text Color', 'Enter the hex code for your button text color.', 'text');
 
@@ -87,12 +88,13 @@ class Buddha_Button_Widget extends WP_Widget
 		wp_enqueue_script( 'buddha-script', plugins_url( '/js/custom.js' , __FILE__ ), array(), '1.0.0', true );
 		
 		$img = plugins_url( 'img/buddha.svg' , __FILE__ );
+		$plugin_bg_color = $instance['plugin_bg_color'];
 		$btn_color = $instance['btn_color'];
 		$btn_text_color = $instance['btn_text_color'];
 		
 		?>
 
-		<div class="bb-wrap">
+		<div class="bb-wrap" style="background-color: <?php echo $plugin_bg_color; ?>">
             <img src="<?php echo $img; ?>" alt="buddha button" />
             <ul class="bb-quotes">
                 <li>"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment."</li>
