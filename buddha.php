@@ -94,15 +94,30 @@ class Buddha_Button_Widget extends WP_Widget
 		$btn_color = $instance['btn_color'];
 		$btn_text_color = $instance['btn_text_color'];
 		
+		function buddha_button_quotes() {
+		    $quotes = array(
+		        'Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.',
+		        'Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship.',
+		        'Three things cannot be long hidden: the sun, the moon, and the truth.',
+		        'The mind is everything. What you think you become.'
+		    );
+
+		    $output = '';
+
+		    foreach($quotes as $quote_list) {
+		    		$output .= '<li>"' . $quote_list . '"</li>';
+			}
+
+			return $output;
+		     
+		    //return $quotes[rand(0, count($quotes)-1)];
+		}
 		?>
 
 		<div class="bb-wrap" style="background-color: <?php echo $plugin_bg_color; ?>; color:<?php echo $quote_text_color; ?>">
             <img src="<?php echo $img; ?>" alt="buddha button" />
             <ul class="bb-quotes">
-                <li>"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment."</li>
-                <li>"Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship."</li>
-                <li>"Three things cannot be long hidden: the sun, the moon, and the truth."</li>
-                <li>"The mind is everything. What you think you become."</li>
+            	<?php echo buddha_button_quotes(); ?>
             </ul>
             <button class="getBuddha"<?php if (isset($btn_color)) echo ' style="background-color: ' . $btn_color . '; color: ' . $btn_text_color . '"';?>>What would Buddha do?</button>
         </div>
