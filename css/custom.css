@@ -21,7 +21,7 @@
 	border-color: #551606;
 	color: white;
 	border-radius: 5px;
-	transition: background-color 300ms ease-out;
+	transition: background-color 2000ms ease-out;
 }
 
 .bb-quotes {
