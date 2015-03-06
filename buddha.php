@@ -99,11 +99,24 @@ class Buddha_Button_Widget extends WP_Widget
 		        'Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.',
 		        'Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship.',
 		        'Three things cannot be long hidden: the sun, the moon, and the truth.',
-		        'The mind is everything. What you think you become.'
+		        'The mind is everything. What you think you become.',
+		        'All that we are is the result of what we have thought.',
+				'Thousands of candles can be lit from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.',
+				'You yourself, as much as anybody in the entire universe, deserve your love and affection.',
+				'All that we are is the result of what we have thought. The mind is everything. What we think we become.',
+				'The secret of health for both mind and body is not to mourn for the past, worry about the future, or anticipate troubles, but to live in the present moment wisely and earnestly.',
+				'All that we are is the result of what we have thought. If a man speaks or acts with an evil thought, pain follows him. If a man speaks or acts with a pure thought, happiness follows him, like a shadow that never leaves him.',
+				'You will not be punished for your anger, you will be punished by your anger.',
+				'There are two mistakes one can make along the road to truth...not going all the way, and not starting.',
+				'Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned.'
 		    );
-
+		
 		    $output = '';
 
+		    // Randomize the quotes
+		    shuffle($quotes);
+
+		    // Build quotes list
 		    foreach($quotes as $quote_list) {
 		    		$output .= '<li>"' . $quote_list . '"</li>';
 			}
