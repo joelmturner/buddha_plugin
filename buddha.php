@@ -3,7 +3,7 @@
 Plugin Name: Buddha Button
 Plugin URI: joelmturner.com/buddha-button
 Description: Adds a widget to the site. Ask Buddha about your situation and hit the <strong>What would Buddha do?</strong> button to receive some wisdom.
-Version: 1.0
+Version: 1.1
 Author: joelmturner
 Author URI: http://joelmturner.com
 License: GPL2
